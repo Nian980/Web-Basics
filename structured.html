@@ -1,0 +1,153 @@
+<!--Structuring the page with HTML semantic elements-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Structure</title>
+</head>
+
+<body>
+
+    <header>
+        <!--Global header-->
+        <h1>Wikipedia Article</h1>
+        <h2>Table of Contents</h2>
+
+        <nav>
+            <!--Navigation-->
+            <ol>
+                <li>
+                    <a href="#intro">Introduction</a>
+                </li>
+                <li>
+                    <a href="#part1">Part 1</a>
+                </li>
+                <li>
+                    <a href="#part2">Part 2</a>
+                </li>
+                <li>
+                    <a href="#pic">Picture</a>
+                </li>
+                <li>
+                    <a href="#links">links</a>
+                </li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <!--Main content-->
+
+        <article>
+
+            <header id="intro">
+                <h2>Introduction</h2>
+            </header>
+
+            <p>Sentence 1.</p>
+            <p>Sentence 2.</p>
+
+            <aside>
+                <!--aside is for extra info, e.g. facts-->
+                <h4>Extra Info</h4>
+                <p>This is an aside of this page, adds extra info to the content.
+                    <mark>This is within 'mark', which usually highlights this line.</mark>
+                    'mark' only has semantic meaning, need to provide styling for it.
+                </p>
+            </aside>
+
+        </article>
+
+        <section>
+            <!--One section. Sections are for content that doesn't make sense on its own.-->
+
+            <header id="part1">
+                <h2>Part 1</h2>
+            </header>
+
+            <p>Long paragraph here.</p>
+
+        </section>
+
+        <section>
+
+            <header id="part2">
+                <h2>Part 2</h2>
+                <h4>Subheading 1</h4>
+            </header>
+
+            <p>Blah large paragraph here</p>
+
+            <h4>Subheading 2</h4>
+            <p>Hmm... more info. </p>
+
+            <h4>Subheading 3</h4>
+            <p>More good HTML structuring.</p>
+
+        </section>
+
+        <section>
+
+            <header id="pic">
+                <h2>Picture</h2>
+            </header>
+
+            <figure>
+                <img src="html css javascript.png" width=300 alt="Logos of HTML5 CSS3 and Javascript">
+                <figcaption>Fig1. - The HTML5 logo made official in April 2011</figcaption>
+            </figure>
+
+        </section>
+
+        <section>
+
+            <header id="links">
+                <h2>Links</h2>
+            </header>
+
+            <p>Contents of this sample have been adapted from the
+                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">HTML5 page on Wikipedia</a>
+            </p>
+
+        </section>
+
+    </main>
+    <!--End of main content now-->
+
+    <!--Global footer is for copyright / author / contact info / footer navigation bar...etc.-->
+    <footer>
+        <p>Copyright (This is in the footer)</p>
+
+        <details>
+            <!--Allows the triangle to expand for a dropdown list-->
+            <summary>Important copyright info</summary>
+            <p>Note 1</p>
+            <p>Note 2</p>
+            <p>Note 3</p>
+        </details>
+        <details>
+            <summary>Contact</summary>
+            <nav>
+                <!--nav menu is horizontal, a href="#" means it doesn't link to anything-->
+                <ul style="margin: 0; padding: 0; list-style-type: none;">
+                    <li style="display: inline;">
+                        <a href="#" style="text-decoration: none; padding: .2em 1em;">email</a>
+                    </li>
+                    <li style="display: inline;">
+                        <a href="#" style="text-decoration: none; padding: .2em 1em;">twitter</a>
+                    </li>
+                    <li style="display: inline;">
+                        <a href="#" style="text-decoration: none; padding: .2em 1em;">facebook</a>
+                    </li>
+                    <li style="display: inline;">
+                        <a href="#" style="text-decoration: none; padding: .2em 1em;">GitHub</a>
+                    </li>
+                </ul>
+            </nav>
+        </details>
+    </footer>
+
+</body>
+
+</html>
