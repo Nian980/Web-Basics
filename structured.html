@@ -98,7 +98,20 @@
             </header>
 
             <figure>
-                <img src="html css javascript.png" width=300 alt="Logos of HTML5 CSS3 and Javascript">
+                <!--Note: can leave alt empty if image purely for decorative purposes-->
+                <!--Also generally bad practice to encode dimensions directly into the HTML.-->
+                <!--
+                    If adding the image into some content and it needs to be a certain 
+                    size for the visual flow of the reader, then it is best to add it to HTML using the height 
+                    and width attributes. This avoids cluttering your CSS with a style for every image. This is 
+                    also useful if you are changing or removing the image: you can just remove it from your HTML 
+                    and not deal with remembering to remove it from CSS too.
+                -->
+                <!--
+                    Decorative images that serve no purpose should not be put into the content on HTML, but instead
+                    moved to CSS. 
+                -->
+                <img src="html css javascript.png" width=300 alt="Logos of HTML5 CSS3 and Javascript" title="HTML CSS3 and Javascript logos">
                 <figcaption>Fig1. - The HTML5 logo made official in April 2011</figcaption>
             </figure>
 
