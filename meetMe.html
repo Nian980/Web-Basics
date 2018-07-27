@@ -9,7 +9,27 @@
 </head>
 
 <body>
-    <h1>Nianxu Wang</h1>
+    <header>
+        <!--Global header-->
+        <h1>Nianxu Wang</h1>
+
+        <nav>
+            <!--details tag not supported in internet explorer...-->
+            <details>
+                <summary>Table of Contents</summary>
+                <p>
+                    <a href="#goals">Introduction</a>
+                </p>
+                <p>
+                    <a href="#goals">Goals</a>
+                </p>
+                <p>
+                    <a href="#contact">Social Media</a>
+                </p>
+
+            </details>
+        </nav>
+    </header>
 
     <figure>
         <img src="profile.jpg" width=350 alt="Profile Picture" />
@@ -18,12 +38,12 @@
         </figcaption>
     </figure>
 
-    <h3>Hi I'm Nian!</h3>
+    <h3 id="#intro"> Hi I'm Nian!</h3>
     <p>
         Just getting back into web design!
     </p>
     <br>
-    <h4 id="#goals">Goals for learning (front-end):</h4>
+    <h3 id="#goals">Goals for learning (front-end):</h3>
     <ul>
         <li>HTML5/CSS3</li>
         <li>Javascript</li>
@@ -32,19 +52,31 @@
         <li>Angular</li>
         <li>React and Redux</li>
     </ul>
+
+    <h3 id="contact">Contact Me</h3>
     <p>
         Find me at LinkedIn:
         <a href="https://www.linkedin.com/in/nianxu-wang/">@Nianxu-Wang</a>
     </p>
+    <p>Other social media:</p>
+    <ul>
+        <li>
+            <a href="twitter.com">Twitter</a>
+        </li>
+        <li>
+            <a href="facebook.com">Facebook</a>
+        </li>
+    </ul>
     <br>
     <hr>
+    
     <!--Global footer, would be use across the entire website-->
     <footer>
         &nbsp; &nbsp; &nbsp; ©Copyright 2018 Nianxu Wang
         <nav>
             <ul>
                 <li>
-                    <a href="">Email</a>
+                    <a href="mailto:hello@example.com">Email</a>
                 </li>
                 <li>
                     <a href="">Facebook</a>

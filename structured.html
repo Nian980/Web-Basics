@@ -122,9 +122,12 @@
             <header id="links">
                 <h2>Links</h2>
             </header>
-
-            <p>Contents of this sample have been adapted from the
-                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">HTML5 page on Wikipedia</a>
+<!--
+    For href hyperlinks, target="_self" is the default, opens new page in current window. 
+    target="_blank" will open in new window or tab. 
+-->
+            <p>HTML5 wikipedia page:
+                <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"></a>
             </p>
 
         </section>
@@ -148,8 +151,14 @@
             <nav>
                 <!--nav menu is horizontal, a href="#" means it doesn't link to anything-->
                 <ul style="margin: 0; padding: 0; list-style-type: none;">
+                    <!--
+                        Actually, providing an email like below is bad practice because:
+                        1. It will open up desktop email client which user may not use
+                        2. It will be exposed to bot and spam crawlers. 
+                        Should use a contact form instead. 
+                    -->
                     <li style="display: inline;">
-                        <a href="#" style="text-decoration: none; padding: .2em 1em;">email</a>
+                        <a href="mailto:authors@example.com?Subject=Hi" style="text-decoration: none; padding: .2em 1em;">email</a>
                     </li>
                     <li style="display: inline;">
                         <a href="#" style="text-decoration: none; padding: .2em 1em;">twitter</a>
