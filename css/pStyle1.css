@@ -1,15 +1,19 @@
 /* p is the selector. 
 When a selector appears unprefixed by any punctuation, then it is assumed to match to an HTML tag*/
+
 p {
     /* Property value pairs */
     font-family: "Time New Roman", Times, serif;
     font-size: 16px;
-    line-height: 40px; /*Space between lines*/
+    line-height: 2.0em;
+    /*Space between lines. Can also use px as unit*/
     color: #99AAFF;
+    text-align: center;
 }
+
 /* Everything inside the {} is the declaration */
 
-h1 {
+/* h1 {
     font-family: "Time New Roman", Times, serif;
     font-size: 32px;
-}
+} */

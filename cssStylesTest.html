@@ -4,11 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Style and link tags</title>
-    <!-- 
-    <style> 
-        /* CSS goes here  */
+
+    <style>
+        body,
+        html {
+            font-size: 22px;
+            font-family: sans-serif;
+        }
+
+        /* 
+        font-family caveats: 
+        - the various browsers only guarantee a few standard choices: serif, sans-serif, monospace, cursive, and fantasy.
+        - any other choice must be already installed on the users machine.
+        - you may use a "Web font", which is quite plentiful
+        - you can't "give" a font to the end user, so can only use web fonts as alternative.
+        - Hence font-family takes a list of possible fonts, and if first one doesn't work then tries next one..etc.
+        */
+        
+
+        address {
+            font-size: 0.7rem;
+            /* 1rem == font size of the html */
+            /* root em elements are relative to the root font-size (i.e. html font-size) */
+            font-family: serif;
+            color: dimgray;
+            text-align: center;
+            /* Note: text-align useful on blocklevel elements, e.g. <p>, <li>, <ul>, <ol>, <div>, and <blockquote> */
+            /* 
+            Only use text-align when the alignment really needs to be changed.
+            The new values start and end are currently being implemented in browsers, and those will 
+            be a much better choice than left and right once Internet Explorer supports them.
+            */
+            text-decoration: underline;
+            font-weight: bold; /*normal (400), bold (700), relative to parent: bolder, lighter*/
+            font-style: italic;  /*normal, italic*/
+        }
+        /* 
+        p { text-decoration: underline; }
+        a { text-decoration: none; }  //hyperlinks are underlined by default, but that can be removed 
+        span { text-decoration: overline; }
+        span { text-decoration: line-through; } //strikethrough 
+        span { text-decoration: underline overline line-through; } //all of the above
+        */
+
+        h1 {
+            color: crimson;
+            text-align: center;
+            text-shadow: 2px 2px #333333;
+            /* text-shadow: 0 0 5px #0000FF; */
+        }
     </style>
-    -->
+
     <link rel="stylesheet" href="css/pStyle1.css">
     <!--
         <style> may be convenient, but best practice is have separate .css files 
@@ -29,6 +75,8 @@
         If the <address> element is inside an <article> element, it represents contact information for that article.
         The text in the <address> element usually renders in italic. Most browsers will add a line break before and after the address element.
     -->
+
+    <br>
 
     <p>
         Curtains forcing their will
