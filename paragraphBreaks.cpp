@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -10,7 +9,7 @@ int main(int argc, char *argv[]) {
 		std::cerr << "Please provide an input file name" << std::endl;
 		return 0;
     }
-    std::cout << "Will add <li> and </li>" << std::endl;
+    std::cout << "Will add <br> to end of line" << std::endl;
 
     std::ifstream ifile(argv[1]);
 	if (ifile.fail()) {
@@ -22,7 +21,7 @@ int main(int argc, char *argv[]) {
 
     std::string line = ""; //for each line to add <li> to
     while(getline(ifile, line)) {
-        line = "<li>" + line + "</li>\n";
+        line = line + "<br>\n";
         ofile << line;
     }
 
