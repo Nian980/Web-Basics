@@ -3,17 +3,58 @@ When a selector appears unprefixed by any punctuation, then it is assumed to mat
 
 p {
     /* Property value pairs */
-    font-family: "Time New Roman", Times, serif;
+    font-family: "Time New Roman", "Times", serif;
+    /* Alwyas use "" for font name, unless the 5 built-ins (serif, sans-serif...) */
     font-size: 16px;
     line-height: 2.0em;
-    /*Space between lines. Can also use px as unit*/
-    color: #99AAFF;
+    /* Generally, line-height should be at least 1.5 times the font-size (ie, > 1.5em ). */
+    /* Space between lines. Can also use px as unit*/
+    color: #99AAFF; /* Many choices, even transparent! Will make the text invisible. */
+    /* However, if you want to make an HTML element invisible, 
+    then the display:none; or visibility:hidden; rules are preferred */
+    /* Also can use rgb e.g. rgba(10, 200, 255, 0.5); */
     text-align: center;
 }
-
 /* Everything inside the {} is the declaration */
 
-/* h1 {
-    font-family: "Time New Roman", Times, serif;
-    font-size: 32px;
-} */
+/* 
+Units:
+20px ~= 20 pixels on screen depending on browser zooming retina and other factors
+1em maps to the height of one capital letter in the parent context.
+    In an HTML document with lots of nested elements, 'rem' will generally 
+be more reliable than 'em'.  'rem' is supported in all modern day browsers, including mobile, 
+but not older ones.
+    Difference between em and rem:
+- Nested list items would get increasingly smaller. And if 'rem' units were used, 
+  they would be the same size.
+This sets root size: html, body { font-size: 20px; }
+Percentage %:
+p { 
+  margin-left:  10%;
+  margin-right: 10%;  //10% of parent width will be spent on the two side margins
+} 
+For % to work correctly, the parent must have an explicit width or height set.
+    'vh' stands for viewport height, and 'vw' for viewport width.  The vh and vw units 
+work much like the percentage ( % ) unit. But instead of percentage of the parent, it is 
+percentage of the screen (aka viewport). 
+*/
+
+
+/* Whenever you want to move something a little the margin property 
+should be your first thought, when having layout problems, it is the 
+first thing you should check.
+Depending upon context, it will space an item away from its immediate 
+neighbors (in the HTML) or from the edges of its parent. Also, there is 
+not only one margin property. 
+
+There are 5 margin properties: 
+p { margin: 10px; }  // a 10 pixel margin will be applied around all four sides of the item
+p {
+    margin-left:   10px; 
+    margin-right:  10px;   
+    margin-top:    10px;   
+    margin-bottom: 10px; 
+}  
+   
+*/
+
