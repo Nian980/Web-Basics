@@ -59,8 +59,16 @@ nav {
     margin-right: 2.5rem;
 }
 
-/* Doesn't seem to do anything
-nav>* { For everything inside navigation
+nav>ul {
+    /* For the unsorted list in nav */
+    text-align: center;
+    /* center it to the center of page */
+    list-style-type: none;
+    /* no bullet points */
+}
+
+/* This doesn't seem to do anything
+nav>* { For everything inside nav
     Push the text inside the navigation to the right a little
     margin-left: 8%;
     margin-right: 8%; Can't actually see this rn, as the text is too left
@@ -73,18 +81,19 @@ block - Displays an element as a block element (like <p>). It starts on a new li
 
 img {
     display: block;
+    /* Set the margin property to auto to horizontally center the element within its container. In this case, center left right of article. */
     margin-left: auto;
     margin-right: auto;
     min-width: 200px;
     max-width: 500px;
-    border: thick double #09158180;
     /* Blue double border around image */
+    border: thick double #09158180;
     /* border-style: outset; */
 }
 
 figcaption {
-    text-align: center;
     /* Now caption of image is at center of page */
+    text-align: center;
 }
 
 article {
@@ -96,12 +105,14 @@ article {
     margin-right: 2.5rem;
 }
 
-article h3, ul, ol { /* For h3, ul and ol that are inside article */
+article h3, ul, ol {
+    /* For h3, ul and ol that are inside article */
     margin-left: 8%;
     margin-right: 8%;
 }
 
-ol li { /* For any li that is under ordered list (essentially the "Steps" part) */
+ol li {
+    /* For any li that is under ordered list (essentially the "Steps" part) */
     padding-bottom: 1em;
 }
 
@@ -116,3 +127,10 @@ ol li { /* For any li that is under ordered list (essentially the "Steps" part) 
 #footer>p {
     font-style: italic;
 }
+
+/* Scenario: 
+Your <article> contains several paragraphs of text (<p>). 
+You want more space between the individual paragraphs. 
+Your "go to" property when needing to adjust positioning should always be margin. 
+In this situation, simply adjusting the top or bottom margins ( margin-top margin-bottom) would suffice.
+*/
