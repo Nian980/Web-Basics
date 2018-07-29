@@ -5,6 +5,48 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Structure</title>
+    <style>
+        #intro { /*This is an id selector, different from a tag selecter like h1*/
+            color: blue;
+        }
+
+        .paragraph { /*This is a class selector */
+            color: green; 
+        }
+
+        /* Combining selectors, use commas */
+        blockquote,
+        q,
+        {
+            color: purple;
+            font-style: italic;
+        }
+        q { /* If q needs an additional rule */
+            font-family: sans-serif;
+        }
+
+        /*  Specialized selectors
+        Here, a tag and class selector.
+        Must match both rules. If a tag selector is used, it must appear first. 
+        Only apply to those blockquotes that also have the paragraph class
+        
+        blockquote.paragraph { 
+            margin: 10px; 
+        }
+
+        Descendent selectors. E.g. 
+        #intro blockquote a { font-weight: bold; } 
+        Now any <a> tags inside a blockquote inside the intro id will be bold. Note that this 
+            uses space, while combining selectors use commas. 
+        
+        Direct descendent selectors:
+        Don't want to apply a style to any _possible_ child, but to only to the direct children.
+
+        Everything selector:
+        match any tag. By itself, this is only marginally useful. But combined with other 
+            selectors into a descendant selector, it can be pretty useful
+        */
+    </style>
 </head>
 
 <body>
@@ -66,7 +108,7 @@
         <section>
             <!--One section. Sections are for content that doesn't make sense on its own.-->
 
-            <header id="part1">
+            <header id="part1" class="paragraph">
                 <h2>Part 1</h2>
             </header>
 
@@ -76,7 +118,7 @@
 
         <section>
 
-            <header id="part2">
+            <header id="part2" class="paragraph">
                 <h2>Part 2</h2>
                 <h4>Subheading 1</h4>
             </header>
