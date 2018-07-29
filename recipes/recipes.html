@@ -4,144 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <title>Favorite Recipes</title>
+    <link rel="stylesheet" href="recipePageStyle.css">
 </head>
 
 <body>
-    <h1>Favorite Recipes</h1>
-    <ul>
-        <li>
-            <a href="#fried-chicken">Fried Chicken</a>
-        </li>
-        <li>
-            <a href="#clam-chowder">Clam Chowder</a>
-        </li>
-        <li>
-            <a href="#caesar-salad">Caesar Salad</a>
-        </li>
-    </ul>
+    <!--
+            The content in <main> should not contain any content that is repeated across documents 
+        such as sidebars, navigation links, copyright information, site logos, and search forms.
+            There must not be more than one <main> element in a document. The <main> element must 
+        NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element.
+     -->
+    <main>
+        <h1>Favorite Recipes</h1>
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="#fried-chicken">Fried Chicken</a>
+                </li>
+                <li>
+                    <a href="#clam-chowder">Clam Chowder</a>
+                </li>
+                <li>
+                    <a href="#caesar-salad">Caesar Salad</a>
+                </li>
+            </ul>
+        </nav>
 
-    <article>
-        <h2 id="fried-chicken">Recipe 1: Fried Chicken</h2>
+        <article id="fried-chicken">
+            <h2>Recipe 1: Fried Chicken</h2>
 
-        <!--Note: using <figure> adds a weird indent-->
-        <img src="skillet-fried-chicken.jpg" width=500 alt="Fried chicken bubbling in pan">
-        <figcaption>Definitely one of my favorites!</figcaption>
+            <!--Note: using <figure> adds a weird indent-->
+            <figure>
+                <img src="images/skillet-fried-chicken.jpg" alt="Fried chicken bubbling in pan" class="image">
+                <figcaption>Bubble bubble</figcaption>
+            </figure>
 
-        <h3>List of Ingredients:</h3>
-        <ul>
-            <li>4 cups all-purpose flour, divided</li>
-            <li>2 tablespoons garlic salt</li>
-            <li>1 tablespoon paprika</li>
-            <li>3 teaspoons pepper, divided</li>
-            <li>2-1/2 teaspoons poultry seasoning</li>
-            <li>2 large Nellie’s Free Range Eggs</li>
-            <li>1-1/2 cups water</li>
-            <li>1 teaspoon salt</li>
-            <li>2 broiler/fryer chickens (3-1/2 to 4 pounds each), cut up</li>
-            <li>Oil for deep-fat frying</li>
-        </ul>
+            <h3>List of Ingredients:</h3>
+            <ul>
+                <li>4 cups all-purpose flour, divided</li>
+                <li>2 tablespoons garlic salt</li>
+                <li>1 tablespoon paprika</li>
+                <li>3 teaspoons pepper, divided</li>
+                <li>2-1/2 teaspoons poultry seasoning</li>
+                <li>2 large Nellie’s Free Range Eggs</li>
+                <li>1-1/2 cups water</li>
+                <li>1 teaspoon salt</li>
+                <li>2 broiler/fryer chickens (3-1/2 to 4 pounds each), cut up</li>
+                <li>Oil for deep-fat frying</li>
+            </ul>
 
-        <h3>Steps:</h3>
-        <ol>
-            <li>
-                In a large resealable plastic bag, combine 2-2/3 cups flour, garlic salt, paprika, 2-1/2 teaspoons pepper and poultry seasoning.
-            </li>
-            <li>
-                In a shallow bowl, beat eggs and water; add salt and the remaining flour and pepper.
-            </li>
-            <li>
-                Dip chicken in egg mixture, then place in the bag, a few pieces at a time.
-            </li>
-            <li>
-                Seal bag and shake to coat.
-            </li>
-            <li>
-                In a deep-fat fryer, heat oil to 375°.
-            </li>
-            <li>
-                Fry chicken, several pieces at a time, for 5-6 minutes on each side or until golden brown and juices run clear.
-            </li>
-            <li>
-                Drain on paper towels.
-            </li>
-        </ol>
-    </article>
-    <article>
-        <h2 id="clam-chowder">Recipe 2: Clam Chowder</h2>
+            <h3>Steps:</h3>
+            <ol>
+                <li>
+                    In a large resealable plastic bag, combine 2-2/3 cups flour, garlic salt, paprika, 2-1/2 teaspoons pepper and poultry seasoning.
+                </li>
+                <li>
+                    In a shallow bowl, beat eggs and water; add salt and the remaining flour and pepper.
+                </li>
+                <li>
+                    Dip chicken in egg mixture, then place in the bag, a few pieces at a time.
+                </li>
+                <li>
+                    Seal bag and shake to coat.
+                </li>
+                <li>
+                    In a deep-fat fryer, heat oil to 375°.
+                </li>
+                <li>
+                    Fry chicken, several pieces at a time, for 5-6 minutes on each side or until golden brown and juices run clear.
+                </li>
+                <li>
+                    Drain on paper towels.
+                </li>
+            </ol>
+        </article>
 
-        <!--Note: using <figure> adds a weird indent-->
-        <img src="maine-clam-chowder.jpg" width=500 alt="Clam Chowder in bowl with spoon">
-        <figcaption>Definitely one of my favorites!</figcaption>
+        <article id="clam-chowder">
+            <h2>Recipe 2: Clam Chowder</h2>
 
-        <h3>List of Ingredients:</h3>
-        <ul>
-            <li>4 center-cut bacon strips</li>
-            <li>2 celery ribs, chopped</li>
-            <li>1 large onion, chopped</li>
-            <li>1 garlic clove, minced</li>
-            <li>3 small potatoes, peeled and cubed</li>
-            <li>1 cup water</li>
-            <li>1 bottle (8 ounces) clam juice</li>
-            <li>3 teaspoons reduced-sodium chicken </li>
-            <li>bouillon granules</li>
-            <li>1/4 teaspoon white pepper</li>
-            <li>1/4 teaspoon dried thyme</li>
-            <li>1/3 cup all-purpose flour</li>
-            <li>2 cups fat-free half-and-half, divided</li>
-            <li>2 cans (6-1/2 ounces each) chopped clams, undrained</li>
-        </ul>
+            <!--Note: using <figure> adds a weird indent-->
+            <img src="images/maine-clam-chowder.jpg" alt="Clam Chowder in bowl with spoon" class="image">
+            <figcaption>Warm chowder</figcaption>
 
-        <h3>Steps:</h3>
-        <ol>
-            <li>In a Dutch oven, cook bacon over medium heat until crisp. </li>
-            <li>Remove to paper towels to drain; set aside. </li>
-            <li>Saute celery and onion in the drippings until tender. </li>
-            <li>Add garlic; cook 1 minute longer. Stir in the potatoes, water, clam juice, bouillon, pepper and thyme. </li>
-            <li>Bring to a boil. Reduce heat; simmer, uncovered, for 15-20 minutes or until potatoes are tender.</li>
-            <li>In a small bowl, combine flour and 1 cup half-and-half until smooth. Gradually stir into soup. </li>
-            <li>Bring to a boil; cook and stir for 1-2 minutes or until thickened.</li>
-            <li>Stir in clams and remaining half-and-half; heat through (do not boil). </li>
-            <li>Crumble the cooked bacon; sprinkle over each serving.</li>
-        </ol>
-    </article>
+            <h3>List of Ingredients:</h3>
+            <ul>
+                <li>4 center-cut bacon strips</li>
+                <li>2 celery ribs, chopped</li>
+                <li>1 large onion, chopped</li>
+                <li>1 garlic clove, minced</li>
+                <li>3 small potatoes, peeled and cubed</li>
+                <li>1 cup water</li>
+                <li>1 bottle (8 ounces) clam juice</li>
+                <li>3 teaspoons reduced-sodium chicken </li>
+                <li>bouillon granules</li>
+                <li>1/4 teaspoon white pepper</li>
+                <li>1/4 teaspoon dried thyme</li>
+                <li>1/3 cup all-purpose flour</li>
+                <li>2 cups fat-free half-and-half, divided</li>
+                <li>2 cans (6-1/2 ounces each) chopped clams, undrained</li>
+            </ul>
 
-    <article>
-        <h2 id="caesar-salad">Recipe 3: Caesar Salad</h2>
+            <h3>Steps:</h3>
+            <ol>
+                <li>In a Dutch oven, cook bacon over medium heat until crisp. </li>
+                <li>Remove to paper towels to drain; set aside. </li>
+                <li>Saute celery and onion in the drippings until tender. </li>
+                <li>Add garlic; cook 1 minute longer. Stir in the potatoes, water, clam juice, bouillon, pepper and thyme. </li>
+                <li>Bring to a boil. Reduce heat; simmer, uncovered, for 15-20 minutes or until potatoes are tender.</li>
+                <li>In a small bowl, combine flour and 1 cup half-and-half until smooth. Gradually stir into soup. </li>
+                <li>Bring to a boil; cook and stir for 1-2 minutes or until thickened.</li>
+                <li>Stir in clams and remaining half-and-half; heat through (do not boil). </li>
+                <li>Crumble the cooked bacon; sprinkle over each serving.</li>
+            </ol>
+        </article>
 
-        <!--Note: using <figure> adds a weird indent-->
-        <img src="caesar-salad.jpg" width=500 alt="Caesar Salad on plate">
-        <figcaption>Definitely one of my favorites!</figcaption>
+        <article id="caesar-salad">
+            <h2>Recipe 3: Caesar Salad</h2>
 
-        <h3>List of Ingredients:</h3>
-        <ul>
-            <li>6 cloves garlic, peeled, divided</li>
-            <li>3/4 cup mayonnaise5 anchovy fillets, minced</li>
-            <li>6 tablespoons grated Parmesan cheese, divided</li>
-            <li>1 teaspoon Worcestershire sauce</li>
-            <li>1 teaspoon Dijon mustard</li>
-            <li>1 tablespoon lemon juice, or more to tastesalt to tasteground black pepper to taste</li>
-            <li>1/4 cup olive oil4 cups day-old bread, cubed</li>
-            <li>1 head romaine lettuce, torn into bite-size pieces</li>
-        </ul>
+            <!--Note: using <figure> adds a weird indent-->
+            <img src="images/caesar-salad.jpg" alt="Caesar Salad on plate" class="image">
+            <figcaption>Crunchy</figcaption>
 
-        <h3>Steps:</h3>
-        <ol>
-            <li>Mince 3 cloves of garlic, and combine in a small bowl with mayonnaise, anchovies, 2 tablespoons of the Parmesan
-                cheese, Worcestershire sauce, mustard, and lemon juice. </li>
-            <li>Season to taste with salt and black pepper. </li>
-            <li>Refrigerate until ready to use.</li>
-            <li>Heat oil in a large skillet over medium heat. </li>
-            <li>Cut the remaining 3 cloves of garlic into quarters, and add to hot oil. </li>
-            <li>Cook and stir until brown, and then remove garlic from pan. </li>
-            <li>Add bread cubes to the hot oil. </li>
-            <li>Cook, turning frequently, until lightly browned. </li>
-            <li>Remove bread cubes from oil, and season with salt and pepper.</li>
-            <li>Place lettuce in a large bowl. </li>
-            <li>Toss with dressing, remaining Parmesan cheese, and seasoned bread cubes.</li>
-        </ol>
-    </article>
-    
-    <footer>
+            <h3>List of Ingredients:</h3>
+            <ul>
+                <li>6 cloves garlic, peeled, divided</li>
+                <li>3/4 cup mayonnaise5 anchovy fillets, minced</li>
+                <li>6 tablespoons grated Parmesan cheese, divided</li>
+                <li>1 teaspoon Worcestershire sauce</li>
+                <li>1 teaspoon Dijon mustard</li>
+                <li>1 tablespoon lemon juice, or more to tastesalt to tasteground black pepper to taste</li>
+                <li>1/4 cup olive oil4 cups day-old bread, cubed</li>
+                <li>1 head romaine lettuce, torn into bite-size pieces</li>
+            </ul>
+
+            <h3>Steps:</h3>
+            <ol>
+                <li>Mince 3 cloves of garlic, and combine in a small bowl with mayonnaise, anchovies, 2 tablespoons of the Parmesan
+                    cheese, Worcestershire sauce, mustard, and lemon juice. </li>
+                <li>Season to taste with salt and black pepper. </li>
+                <li>Refrigerate until ready to use.</li>
+                <li>Heat oil in a large skillet over medium heat. </li>
+                <li>Cut the remaining 3 cloves of garlic into quarters, and add to hot oil. </li>
+                <li>Cook and stir until brown, and then remove garlic from pan. </li>
+                <li>Add bread cubes to the hot oil. </li>
+                <li>Cook, turning frequently, until lightly browned. </li>
+                <li>Remove bread cubes from oil, and season with salt and pepper.</li>
+                <li>Place lettuce in a large bowl. </li>
+                <li>Toss with dressing, remaining Parmesan cheese, and seasoned bread cubes.</li>
+            </ol>
+        </article>
+    </main>
+
+
+    <footer id="footer">
+        <p id="copyright-text">©Copyright 2018 details below</p>
         <details>
             <summary>Sources</summary>
             <a href="https://www.tasteofhome.com/recipes/crispy-fried-chicken/">Fried Chicken</a>
