@@ -33,6 +33,8 @@
         blockquote.paragraph { 
             margin: 10px; 
         }
+        OR: 
+        .leaf.fruit {}
 
         Descendent selectors. E.g. 
         #intro blockquote a { font-weight: bold; } 
@@ -41,6 +43,8 @@
         
         Direct descendent selectors:
         Don't want to apply a style to any _possible_ child, but to only to the direct children.
+        e.g. #intro > a { font-size: large; }
+        This would cause the links in the intro section to be larger, but not the links in any nested quotes or blockquotes.
 
         Everything selector:
         match any tag. By itself, this is only marginally useful. But combined with other 
