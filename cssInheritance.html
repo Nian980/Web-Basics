@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <style>
+        p {
+            /* inherited by children of p */
+            font-family: monospace;
+
+            /* not inherited */
+            padding: 40px;
+        }
+
+        span,
+        q {
+            /* Now span and q will have padding around them as well */
+            padding: inherit; 
+        }
+
+        /* 
+            Generally, the properties associated with positioning and layout 
+        are not inherited.  Likewise, the decorative properties (borders, background 
+        images, etc.) do not inherit.
+            Most properties that begin with text- or font- will inherit.
+        */
+
+        /* 
+        CSS Precedence: 
+        1. A more specific rule takes precedence over a less specific rule.  
+            A rule that more tightly matches a particular element than a general rule 
+            will be applied. E.g. li span {} over span {}
+        2. #id selector considered more specific than others
+        3. Next is class selector, which is more specific than tag selectors
+        4. Rules that come later override those that come earlier. 
+
+        !important
+        E.g. p { color: orange !important; }
+        That particular CSS property and you want it to take precedence over all others. 
+        */
+
+    </style>
+</head>
+
+<body>
+    <p>This paragraph has children
+        <span>spans</span> and
+        <span>q</span>, which, in turn, have their own child
+        <span>spans</span>.
+
+        <q>With this structure, we can see how some CSS
+            <span>rules</span> are
+            <span>applied across a
+                <q>variety</q>
+            </span> of scopes.</q>
+    </p>
+</body>
+
+</html>
