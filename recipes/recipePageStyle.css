@@ -61,7 +61,7 @@ nav {
 
 nav>ul {
     /* For the unsorted list in nav */
-    text-align: center;
+    text-align: left;
     /* center it to the center of page */
     list-style-type: none;
     /* no bullet points */
@@ -105,7 +105,7 @@ article {
     margin-right: 2.5rem;
 }
 
-article h3, ul, ol {
+article h3, article ul, article ol {
     /* For h3, ul and ol that are inside article */
     margin-left: 8%;
     margin-right: 8%;
@@ -121,11 +121,12 @@ ol li {
     height: 60px;
     background: #1782e69c;
     text-align: center;
-    font-size: 0.8rem;
+    /* font-size: 1rem; */
 }
 
 #footer>p {
     font-style: italic;
+    margin-bottom: 0px;
 }
 
 /* Scenario: 
