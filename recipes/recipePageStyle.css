@@ -61,10 +61,12 @@ nav {
 
 nav>ul {
     /* For the unsorted list in nav */
-    text-align: left;
     /* center it to the center of page */
-    list-style-type: none;
+    text-align: left;
     /* no bullet points */
+    list-style-type: none;
+    /* The bullet point is considered to be inside the content */
+    list-style-position: inside;
 }
 
 /* This doesn't seem to do anything
@@ -89,6 +91,7 @@ img {
     /* Blue double border around image */
     border: thick double #09158180;
     /* border-style: outset; */
+    /* border-radius: 50%; makes image rounded */
 }
 
 figcaption {
