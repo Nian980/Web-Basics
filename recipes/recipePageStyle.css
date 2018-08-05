@@ -18,25 +18,20 @@ Padding creates extra space within an element, while margin creates extra space 
 */
 
 h1 {
-    margin-top: 5rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    margin-bottom: 5rem;
+    max-width: 1000px;
+    margin: auto;
+    /* Need some space above and under the title */
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     border: 0.5rem solid white;
-    border-radius: 10px;
+    border-radius: 20px;
     /* Padding gives space between content and border */
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     background: #2029adab;
     background-size: 100px;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-h2 {
-    /* Move down a little, not too close to the white edge */
-    padding-top: 1em;
-    text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -57,10 +52,14 @@ a:visited {
 
 nav {
     background: #fffefec0;
-    background-size: auto;
-    /* width: 15rem; Can change how wide the nav is along the page */
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    /* background-size: auto; */
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 0.5rem solid white;
+    border-radius: 20px;
 }
 
 nav>ul {
@@ -73,27 +72,38 @@ nav>ul {
     list-style-position: inside;
 }
 
-/* This doesn't seem to do anything
-nav>* { For everything inside nav
-    Push the text inside the navigation to the right a little
-    margin-left: 8%;
-    margin-right: 8%; Can't actually see this rn, as the text is too left
-} */
-
 /* 
 display is the type of rendering box of an element.
 block - Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width
 */
 
+article {
+    background-color: #fffefec0;
+    max-width: 1000px;
+    margin: auto;
+    /* Need some space between each article */
+    margin-bottom: 2.5rem;
+    border: 0.5rem solid white;
+    border-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Move down a little, not too close to the white edge */
+    margin: 1rem;
+}
+
 img {
     display: block;
     /* Set the margin property to auto to horizontally center the element within its container. In this case, center left right of article. */
+    /* Set margin to auto if using width */
     margin-left: auto;
     margin-right: auto;
-    min-width: 200px;
     max-width: 500px;
     /* Blue double border around image */
-    border: thick double #09158180;
+    border: 10px double #2029ad;
+    border-radius: 20px;
     /* border-style: outset; */
     /* border-radius: 50%; makes image rounded */
 }
@@ -101,26 +111,23 @@ img {
 figcaption {
     /* Now caption of image is at center of page */
     text-align: center;
-}
-
-article {
-    background-color: #fffefec0;
-    min-width: 200px;
-    max-width: 1200px;
-    /* So it won't stick to left edge of page */
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    font-style: italic;
 }
 
 article h3, article ul, article ol {
     /* For h3, ul and ol that are inside article */
     margin-left: 8%;
     margin-right: 8%;
+    /* border: 1px solid black; debugging purposes */
 }
 
 ol li {
     /* For any li that is under ordered list (essentially the "Steps" part) */
-    padding-bottom: 1em;
+    line-height: 2.5rem;
+}
+
+ul li {
+    line-height: 1.5rem;
 }
 
 #footer {
@@ -128,7 +135,6 @@ ol li {
     height: 60px;
     background: #1782e69c;
     text-align: center;
-    /* font-size: 1rem; */
 }
 
 #footer>p {
