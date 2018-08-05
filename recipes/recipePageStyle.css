@@ -1,7 +1,7 @@
 html, body {
     background-attachment: fixed;
     /* bg fixed in position as you scroll */
-    background-image: url("images/woodenCuttingBoard2.jpg");
+    background-image: url("images/cookingIngredients1.jpg");
     background-repeat: no-repeat;
     /* Do not repeat bg image */
     background-position: center;
@@ -18,10 +18,14 @@ Padding creates extra space within an element, while margin creates extra space 
 */
 
 h1 {
-    /* Pushes the h1 "Favorite Recipes" out to the very edge of the margin set in "html, body" above */
-    margin: 0 0 0 0;
+    margin-top: 5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-bottom: 5rem;
+    border: 0.5rem solid white;
+    border-radius: 10px;
     /* Padding gives space between content and border */
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     background: #2029adab;
     background-size: 100px;
@@ -30,8 +34,8 @@ h1 {
 }
 
 h2 {
-    padding-top: 1em;
     /* Move down a little, not too close to the white edge */
+    padding-top: 1em;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
