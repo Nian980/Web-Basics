@@ -6,19 +6,50 @@
     <meta name="viewport" content="width=device-width">
     <title>Title</title>
     <style>
-        table {
-            border: 2px solid black;
+        table, th, td {
             margin-bottom: 50px;
+            border:thin dashed black;;
+            /* 
+            We gave a border to the table, table-header and table-data above. 
+            This creates two borders creating a double line. In order to collapse 
+            them all into a single border, we use the border-collapse CSS property 
+            separate - default value where borders are detached like in the example above
+            collapse - border are collapsed into a single border
+            */
+            border-collapse: collapse;
+        }
+
+        /* border-spacing specifies the distance between two cell borders in pixels.
+            It takes two values for horizontal and vertical spacing */
+
+        table.table3 {
+            width: 100%;
+        }
+
+        th {
+            vertical-align: center;
+        }
+        
+        th, td {
+            padding: 3px 5px 5px 3px;
+        }
+
+        th.th1 {
+            width: 25%;
+        }
+
+        th.th2 {
+            height: 40px;
         }
     </style>
 </head>
 
 <body>
-    <!-- caption: 
-    It is used to give a title to the table and should be used as the first child element of <table>. 
-    It can be used to provide more context to the table if its content is ambiguous.
+    <!-- <caption> 
+        It is used to give a title to the table and should be used as the first child element of <table>. 
+        It can be used to provide more context to the table if its content is ambiguous.
     -->
-    <table border=1>
+    <table border=1 class="table1">
         <caption>
             <p>Table 1</p>
             <p>This table does blah blah blah</p>
@@ -30,7 +61,7 @@
                 rowspan - like above, for rows
                 scope - Specifies if a header cell is the header for a row, column, rowgroup or colgroup. 
             -->
-            <th colspan="2">Patients</th>
+            <th colspan="2" class="th1">Patients</th>
             <th rowspan="3">Not covered by insurance</th>
         </tr>
         <tr>
@@ -56,26 +87,30 @@
             <td>10</td>
         </tr>
     </table>
+
+    <!-- second table here -->
     <table border=1>
         <caption>
             This table is about showing the scope arrtibute of th
         </caption>
         <tr>
-            <th scope="row">Name</th>
+            <th scope="row" class="th2">Name</th>
             <td>Alexa</td>
             <td>Jim</td>
             <td>James</td>
             <td>Aria</td>
         </tr>
         <tr>
-            <th scope="row">Age</th>
+            <th scope="row" class="th2">Age</th>
             <td>23</td>
             <td>7</td>
             <td>35</td>
             <td>10</td>
         </tr>
     </table>
-    <table border=1>
+
+    <!-- third table here -->
+    <table border=1 class="table3">
         <!-- <colgroup> tag:
             This tag allows you to group columns in a table. Grouping columns is useful if you want 
             to specify properties for a group of columns like applying styles to the whole column instead 
@@ -95,19 +130,41 @@
             <col span="1" style="background-color:green">
             <col span="1" style="background-color:orange">
         </colgroup>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>Alexa</td>
-            <td>23</td>
-        </tr>
-        <tr>
-            <td>Siri</td>
-            <td>30</td>
-        </tr>
+        <!-- 
+            <thead> is used to group the header content in a HTML table
+            Rows specified within <thead> indicate that they are header rows
+        -->
+        <thead style="color:white">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <!-- 
+            Following <thead>, subsequent rows are considered body rows in a table. 
+            Regular cells are specified using <td> as a child of <tr> 
+        -->
+        <tbody>
+            <tr>
+                <td>Alexa</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Siri</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+        <tfoot style="font-style: italic;">
+            <tr>
+                <td>2 Unique Names</td>
+                <td>2 Unique Ages</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
+
+<!-- Example of using thead, tbody, tfoot to create scrollable parts
+    https://www.tjvantoll.com/demos/2012-11-10/ 
+-->
 
 </html>
