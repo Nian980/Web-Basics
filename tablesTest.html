@@ -6,12 +6,107 @@
     <meta name="viewport" content="width=device-width">
     <title>Title</title>
     <style>
+        table {
+            border: 2px solid black;
+            margin-bottom: 50px;
+        }
     </style>
 </head>
 
 <body>
+    <!-- caption: 
+    It is used to give a title to the table and should be used as the first child element of <table>. 
+    It can be used to provide more context to the table if its content is ambiguous.
+    -->
     <table border=1>
-        
+        <caption>
+            <p>Table 1</p>
+            <p>This table does blah blah blah</p>
+        </caption>
+        <tr>
+            <!-- th is table header cell -->
+            <!-- attributes: 
+                colspan - how many column cells it spans across 
+                rowspan - like above, for rows
+                scope - Specifies if a header cell is the header for a row, column, rowgroup or colgroup. 
+            -->
+            <th colspan="2">Patients</th>
+            <th rowspan="3">Not covered by insurance</th>
+        </tr>
+        <tr>
+            <!-- td is standard table cell -->
+            <!-- attributes:
+                colspan, rowspan.
+                headers - Value is the 'id' of the <th> tag it corresponds to if any
+             -->
+            <td>Alexa</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Jim</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>35</td>
+            <th rowspan="2">Covered by insurance</th>
+        </tr>
+        <tr>
+            <td>Aria</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <table border=1>
+        <caption>
+            This table is about showing the scope arrtibute of th
+        </caption>
+        <tr>
+            <th scope="row">Name</th>
+            <td>Alexa</td>
+            <td>Jim</td>
+            <td>James</td>
+            <td>Aria</td>
+        </tr>
+        <tr>
+            <th scope="row">Age</th>
+            <td>23</td>
+            <td>7</td>
+            <td>35</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <table border=1>
+        <!-- <colgroup> tag:
+            This tag allows you to group columns in a table. Grouping columns is useful if you want 
+            to specify properties for a group of columns like applying styles to the whole column instead 
+            of repeating it for each cell.
+            attribute: span
+                - specifies the number of columns you want your colgroup to span (cover). 
+            The colgroup element shares its attributes like style and width with all the columns it spans.  
+            Essentially it allows a single cell to stretch to cover multiple columns on a particular row.
+        -->
+        <!-- <col> tag: 
+            Used within <colgroup>, the <col> tag specifies the column property for each column within a colgroup. 
+            The only element a <colgroup> can contain is <col>. 
+            attribute: span
+        -->
+        <colgroup>
+            <!-- need to use the <colgroup> and <col> tags to achieve styling effects specific to a column -->
+            <col span="1" style="background-color:green">
+            <col span="1" style="background-color:orange">
+        </colgroup>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Alexa</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Siri</td>
+            <td>30</td>
+        </tr>
     </table>
 </body>
 
