@@ -78,19 +78,6 @@ a:visited {
     color: purple;
 }
 
-/* .dropdown-menu { */
-    /* these 3 doesn't really do anything */
-    /* margin: auto; */
-    /* display: block; */
-    /* text-align: center; */
-
-    /* border is for debugging */
-    /* border: 0.5rem solid red;  */
-    /* margin-bottom: 2.5rem; */
-    /* Same font choices as h1 and h2 */
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-/* } */
-
 .dropdown-menu {
     position: relative;
     display: inline-block;
