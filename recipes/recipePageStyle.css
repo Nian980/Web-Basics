@@ -20,7 +20,7 @@ html, body {
     let you directly manipulate the amount of spacing. That is calculated for you.
  */
 
- /* 
+/* 
     backgroun-size: contain and cover
     The contain value will put the entire image into the space of the element, however, 
     the space of the element may not be completely filled if the aspect ratio of the element 
@@ -65,6 +65,10 @@ a:link {
 a:hover {
     /* What color the links change to when hovering over it */
     color: #13185a;
+    /* common values for cursor are: 
+    default, pointer, text, move, grab, help, crosshair, wait, not-allowed, zoom-in...etc. */
+    cursor: pointer;
+    font-style: italic;
 }
 
 a:visited {
@@ -84,7 +88,7 @@ nav {
     border-radius: 20px;
 }
 
-nav>ul {
+nav ul {
     /* For the unsorted list in nav */
     /* center it to the center of page */
     text-align: left;
@@ -92,6 +96,26 @@ nav>ul {
     list-style-type: none;
     /* The bullet point is considered to be inside the content */
     list-style-position: inside;
+    /* display none means its not shown */
+    display: none;
+}
+
+nav:hover ul {
+    /* if you hover over the nav, the part will show */
+    display: block;
+}
+
+nav li {
+    /* This is so that for the hover white highlight below, the right side 
+        has some distance from the righ edge, better looking. 
+        This essentially gives the content of each li some distance from the 
+        whole nav box. 
+    */
+    margin-right: 4%;
+}
+
+nav li:hover {
+    background-color: white;
 }
 
 /* 
