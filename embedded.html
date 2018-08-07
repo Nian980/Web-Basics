@@ -1,0 +1,57 @@
+<!-- the <iframe> tag: 
+    Allows you to put another Web page in your Web page    
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <style>
+        iframe {
+            border: 10px solid red;
+            padding: .5rem;
+            margin: 1rem;
+            box-shadow: 20px 20px 10px #888888;
+            width: 400;
+            height: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- There is one significant problem with iframes. 
+        Suppose you create your Web page, containing only an iframe with src="http://foo.com", 
+        with no borders, padding or margin. By all appearances, you would seem to be on the Web site foo.com. 
+        If you don't look at the URL, it might be difficult to tell. For reasons like this, 
+        some Web sites disallow their inclusion, so if you create an iframe with src="https://google.com", 
+        you'll get a blank frame and an error message in the console. This isn't a bug, it's a feature. 
+        Google and Yahoo do this for example. 
+    -->
+    <p>This is a parent page that will host the iframe.</p>
+    <iframe src="https://www.w3.org/">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+    <br>
+    <iframe src="https://www.youtube.com/embed/LuUpeVfN-wc" allowfullscreen></iframe>
+    <!-- attributes:
+        sandbox - 
+        This can apply a number of restrictions on the iframe, preventing the site in the iframe from using pop-ups, 
+    running scripts, automatically running videos and numerous other things.  This helps avoid some of the potential 
+    security issues that iframes may be prone to. 
+    -->
+    <!-- Note:
+    - Not all attributes are supported in all browsers.
+    - Iframes load separately from the main page. However, they do block the main page's load command until its 
+        content finishes loading. You can avoid this by applying some Javascript. This allows them to load independently. 
+        Then, if the embedded page you are displaying loads slower, you can use your parent page to keep the reader occupied.
+    - Great for third party content like ads.
+
+    Disadvantages: 
+    - Search engines have trouble accessing and in turn indexing the content in your iframes. 
+    This doesn't help your search ranking. 
+    -->
+</body>
+
+</html>
