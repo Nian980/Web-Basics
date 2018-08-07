@@ -61,6 +61,7 @@ h1 {
 a:link {
     /* The links initial color */
     color: #202aad;
+    text-decoration: none;
 }
 
 a:hover {
@@ -76,25 +77,15 @@ a:visited {
     /* What color the links are after clicking and visiting them */
     color: purple;
 }
-/* 
-nav {
-    background: #fffefec0;
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 2.5rem;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border: 0.5rem solid white;
-    border-radius: 20px;
-} */
 
 .dropdown-menu {
-    /* position: inherit; ??? what does this do */
+    /* these 3 doesn't really do anything */
+    margin: auto;
+    display: block;
+    text-align: center;
+
     border: 0.5rem solid red; /*for debugging*/
-    /* margin-left: 5rem; */
     margin-bottom: 2.5rem;
-    /* in this case, inline-block, inline, or block doesn't really matter */
-    /* display: block; */
     /* Same font choices as h1 and h2 */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -120,22 +111,24 @@ nav {
 }
 
 .dropdown-content {
+    border: 3px solid purple;
+    text-align: center;
     margin: auto;
     /* the menu content is hidden until you hover over */
-    display: none;
+    display: initial;
     position: absolute;
     background-color: white;
     box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.5);
     /* Stack order of element, 
         An element with greater stack order is always in front of an element with a lower stack order.
-     */
-    /* z-index: 1; uneeded here */
+    */
+    /* z-index: 1; unneeded here */
 }
 
 /* so only display content if hovering over */
 .dropdown-menu:hover .dropdown-content {
     margin: auto;
-    display: block;
+    display: inline-block;
 }
 
 .dropdown-content a {
