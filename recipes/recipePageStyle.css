@@ -14,6 +14,13 @@ html, body {
 }
 
 /* 
+    The background-repeat property can also be used to control how it repeats. 
+    The space value will result in cropped images; it means "repeat, and add space 
+    between the elements so there is no cropping".  Note that this property does not 
+    let you directly manipulate the amount of spacing. That is calculated for you.
+ */
+
+/* 
 Padding creates extra space within an element, while margin creates extra space around an element! 
 */
 
