@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
 <head>
   <meta charset="UTF-8">
   <title>Activity - Rectangles</title>
@@ -26,6 +29,18 @@
       padding: 0px;
     }
 
+    /*
+    border-style:
+    The difference between none and hidden has to do with the sizing and positioning of the element. 
+    An item with a hidden border is positioned as if it had a border, but the border is not drawn. 
+    Whereas with border-style of none, no space is allocated for the border at all. 
+    */
+
+    /* 
+    box-shadow: <x-offset> <y-offset> <blur> <color>;
+    text-shadow:  <x-offset> <y-offset> <blur> <color>;
+    */
+
     #third {
       text-align: center;
       background-color: green;
@@ -48,7 +63,9 @@
     }
 
     /* This creates a gradient border */
+
     /* https://css-tricks.com/examples/GradientBorder/ */
+
     .multbg-top-to-bottom {
       border-top: 3px solid black;
       background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
