@@ -20,6 +20,16 @@ html, body {
     let you directly manipulate the amount of spacing. That is calculated for you.
  */
 
+ /* 
+    backgroun-size: contain and cover
+    The contain value will put the entire image into the space of the element, however, 
+    the space of the element may not be completely filled if the aspect ratio of the element 
+    and the image do not match.  The cover value is the opposite. It will completely fill 
+    the element but the image may be cropped off two opposite sides.  Neither contain or cover 
+    will distort or squish the image.  Its aspect ratio is maintained.
+    It can also be used to state exact sizes, e.g. background-size: 50% auto; (50% of parent)
+ */
+
 /* 
 Padding creates extra space within an element, while margin creates extra space around an element! 
 */
@@ -41,6 +51,11 @@ h1 {
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+/* 
+    Pseudo Classes allow us to apply styles to the different states of an element. 
+    Or to various children of an element based on their index, or to other interactions with the browser. 
+*/
 
 a:link {
     /* The links initial color */
