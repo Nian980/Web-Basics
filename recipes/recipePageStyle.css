@@ -88,35 +88,6 @@ nav {
     border-radius: 20px;
 }
 
-nav ul {
-    /* For the unsorted list in nav */
-    /* center it to the center of page */
-    text-align: left;
-    /* no bullet points */
-    list-style-type: none;
-    /* The bullet point is considered to be inside the content */
-    list-style-position: inside;
-    /* display none means its not shown */
-    display: none;
-}
-
-nav:hover ul {
-    /* if you hover over the nav, the part will show */
-    display: block;
-}
-
-nav li {
-    /* This is so that for the hover white highlight below, the right side 
-        has some distance from the righ edge, better looking. 
-        This essentially gives the content of each li some distance from the 
-        whole nav box. 
-    */
-    margin-right: 4%;
-}
-
-nav li:hover {
-    background-color: white;
-}
 
 /* 
 display is the type of rendering box of an element.
