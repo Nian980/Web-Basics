@@ -41,7 +41,7 @@ h1 {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     border: 0.5rem solid white;
-    border-radius: 20px;
+    border-radius: 5px;
     /* Padding gives space between content and border */
     padding-top: 20px;
     padding-bottom: 20px;
@@ -50,6 +50,7 @@ h1 {
     background-size: 100px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* 
@@ -75,33 +76,59 @@ a:visited {
     /* What color the links are after clicking and visiting them */
     color: purple;
 }
+/* 
+nav {
+    background: #fffefec0;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 0.5rem solid white;
+    border-radius: 20px;
+} */
 
 .dropdown-menu {
-    position: inherit;
-    /* display: inline-block; */
+    position: inherit; /*???*/
+    border: 0.5rem solid red; /*for debugging*/
+    /* margin-left: 5rem; */
+    margin-bottom: 2.5rem;
+    /* in this case, inline-block, inline, or block doesn't really matter */
+    display: block;
+    /* Same font choices as h1 and h2 */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .dropdown-button {
+    margin: auto;
+    /* The look of the button */
     background-color: #2029ad;
+    /* the text color is white and of size 1rem*/
     color: white;
     font-size: 1rem;
     padding: 1rem;
-    border: none;
-    border-radius: 10px;
+    border: 0.5rem solid white;
+    border-radius: 5px;
     width: 200px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 .dropdown-button:hover {
+    /* when cursor hovering over button, change to this color */
     background-color: #5b83f3;
 }
 
 .dropdown-content {
+    /* the menu content is hidden until you hover over */
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    background-color: white;
+    min-width: 160px; /*??????????*/
     box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    /* Stack order of element, 
+        An element with greater stack order is always in front of an element with a lower stack order.
+     */
+    /* z-index: 1; uneeded here */
 }
 
 .dropdown-menu:hover .dropdown-content {
@@ -109,8 +136,20 @@ a:visited {
     display: block;
 }
 
+.dropdown-content a {
+    /* This makes the recipe names display one after another below, instead of side to side */
+    display: block;
+    /* Same width as the dropdown-button */
+    width: 200px;
+    /* Add some top and bottom padding */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* Center each recipe name */
+    text-align: center;
+}
+
 .dropdown-content a:hover {
-    /* so only applies to links in the nav menu*/
+    /* so only applies to links in the nav menu, and when you hover over them */
     background-color: #ddd;
 }
 
@@ -125,15 +164,17 @@ article {
     margin: auto;
     /* Need some space between each article */
     margin-bottom: 2.5rem;
-    border: 0.5rem solid white;
-    border-radius: 20px;
+    border: 0.2rem solid white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 h2 {
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* Move down a little, not too close to the white edge */
-    margin: 1rem;
+    margin: 0;
+    padding: 1rem;
+    background-color: white;
 }
 
 img {
