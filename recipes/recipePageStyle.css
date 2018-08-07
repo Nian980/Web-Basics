@@ -78,19 +78,32 @@ a:visited {
     color: purple;
 }
 
-.dropdown-menu {
+/* .dropdown-menu { */
     /* these 3 doesn't really do anything */
-    margin: auto;
-    display: block;
-    text-align: center;
+    /* margin: auto; */
+    /* display: block; */
+    /* text-align: center; */
 
-    border: 0.5rem solid red; /*for debugging*/
-    margin-bottom: 2.5rem;
+    /* border is for debugging */
+    /* border: 0.5rem solid red;  */
+    /* margin-bottom: 2.5rem; */
     /* Same font choices as h1 and h2 */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+/* } */
+
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+
+    /* these are for repositioning into the center */
+    margin-left: 50%;
+    position: relative;
+    right: 100px;
 }
 
 .dropdown-button {
+    /* margin: auto and display block centers the button to page. unnecessary now with the way i did it above dropdown-menu*/
     margin: auto;
     display: block;
     /* The look of the button */
@@ -111,12 +124,13 @@ a:visited {
 }
 
 .dropdown-content {
-    border: 3px solid purple;
     text-align: center;
     margin: auto;
     /* the menu content is hidden until you hover over */
-    display: initial;
+    display: none;
+    /* absolute makes it so that it doesn't push down the article when it shows */
     position: absolute;
+    
     background-color: white;
     box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.5);
     /* Stack order of element, 
@@ -128,7 +142,8 @@ a:visited {
 /* so only display content if hovering over */
 .dropdown-menu:hover .dropdown-content {
     margin: auto;
-    display: inline-block;
+    /* now, with the .dropdown-menu settings, block, inline-block doesn't really matter */
+    display: block;
 }
 
 .dropdown-content a {
@@ -147,6 +162,7 @@ a:visited {
     /* so only applies to links in the nav menu, and when you hover over them */
     background-color: #ddd;
 }
+
 
 /* 
 display is the type of rendering box of an element.
