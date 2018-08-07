@@ -1,0 +1,50 @@
+<!-- ismap and usemap -->
+<!-- 
+    usemap is a lot like ismap and is more widely used. 
+    ismap deals with server-side image-maps whereas usemap deals with client-side image-maps. 
+-->
+<!-- 
+    Server-side image-maps: use separate map files that have to be downloaded. They depend on the server for translating the request. They also create additional network traffic. 
+    Client-side image-maps: reside within an HTML document. The browser takes care of the translation (translating mouse coordinates clicked to corresponding Web pages). 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- ismap is a boolean attribute i.e. its value is either true or false. 
+        Thus, just the presence of the attribute indicates that it is a mapped image. 
+        To be more precise, we say it is a server-side image-map. 
+    -->
+    <!-- An <img> tag with the src  and ismap attributes creates an image with the image 
+        source file and indicates it is a server-side image-map. How will your code know 
+        that if you click on a part of your image, i.e. 'Australia in a world map', it should 
+        navigate to the country's Wikipedia page? We need to create a map file with these 
+        details and then add the location of this map file using the anchor element.
+     -->
+    <a href="/ismap-image/ismap.cgi" target="_self">
+        <img src="images/html css javascript.png" alt="ismap tutorial" ismap>
+    </a>
+    <!-- ismap only works if the <img> tag is used within the anchor element like in the code above. -->
+
+    <br>
+
+    <!-- usemap takes in the name of the map with a '#' character preceding it. -->
+    <img src="images/crossroads.jpg" alt="Crossroads" usemap="#navigatormap">
+    <map name="navigatormap">
+        <area shape="rect" coords="0,0,195,439" href="https://en.wikipedia.org/wiki/Millery" alt="Millery">
+        <area shape="rect" coords="196,0,390,439" href="https://en.wikipedia.org/wiki/Nomeny" alt="Nomeny">
+    </map>
+
+    <!-- Can use online image map generator tool to generate coordinates for poly-shaped usemaps -->
+</body>
+
+</html>
