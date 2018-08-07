@@ -89,18 +89,19 @@ nav {
 } */
 
 .dropdown-menu {
-    position: inherit; /*???*/
+    /* position: inherit; ??? what does this do */
     border: 0.5rem solid red; /*for debugging*/
     /* margin-left: 5rem; */
     margin-bottom: 2.5rem;
     /* in this case, inline-block, inline, or block doesn't really matter */
-    display: block;
+    /* display: block; */
     /* Same font choices as h1 and h2 */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .dropdown-button {
     margin: auto;
+    display: block;
     /* The look of the button */
     background-color: #2029ad;
     /* the text color is white and of size 1rem*/
@@ -119,6 +120,7 @@ nav {
 }
 
 .dropdown-content {
+    margin: auto;
     /* the menu content is hidden until you hover over */
     display: none;
     position: absolute;
@@ -130,8 +132,9 @@ nav {
     /* z-index: 1; uneeded here */
 }
 
+/* so only display content if hovering over */
 .dropdown-menu:hover .dropdown-content {
-    /* so only display content if hovering over the  */
+    margin: auto;
     display: block;
 }
 
