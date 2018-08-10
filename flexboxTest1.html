@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <style>
+        /* Check HTML5 and CSS3 fundamentals course on edX, bookmarked chapter 6.3 CSS Flexbox */
+
+        /* 
+            flex-flow is an abbreviation that replaces two other flexbox container properties: 
+            flex-direction and flex-wrap.  
+            "row wrap" is usually the standard
+            flex-direction: row, row-reverse, column, and column-reverse
+            flex-wrap: wrap, wrap-reverse, and nowrap
+        */
+
+        div {
+            /* This element is now a flex container, and will handle the layout of its children*/
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        /* 
+            The direct children of a flex container are automatically converted into flex items, 
+            with the exception of children that are position-fixed or position-absolute, which are 
+            taken out of the "flow" of the flex container.  So there is no property needed to 
+            designate a child as a flex item, as it happens automatically. 
+
+            One other automatic behavior to be aware of is that empty flex items are automatically 
+            removed from the flex container. Keep that in mind if you were planning on using an 
+            empty <div></div> construct as a placeholder for a CSS background image. 
+        */
+
+        div p {
+            /* Setting the flex-grow to 0 will prevent the flex item from growing. That will cause the item to lose its flexible sizing ability  */
+            /* 
+                The flex-shrink is the opposite of flex-grow. When laying out any row or column, 
+                if the flex container needs to take away some space from the children, then those 
+                with the highest flex-shrink values contribute more of the needed space. 
+            */
+            flex: 1 1;
+
+            /* Some other small changes to make it look neater */
+            margin: 10px;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        #flex2 {
+            /*  flex-grow
+                determines how much extra space this flex item should get relative to its siblings.
+                Note that the content of each sibling is first accounted for by the flex container, then the extra space. 
+            */
+            flex: 2 2;
+
+            margin: 10px;
+            padding: 10px;
+            background-color: gray;
+        }
+        
+        /* flex is a property used for flex items (children of flex containers)
+        These three properties interrelate: 
+        flex: <flex-grow> <flex-shrink> <flex-basis>;
+        */
+
+        /* Small note: If you must set flex-shrink to 0, then it is recommended that you also set the box-sizing to border-box */
+
+        span {
+            display: inline-flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="flex2">
+            In computer programming, a variable or scalar is a storage location (identified by a memory address) paired with an associated
+            symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a
+            value. The variable name is the usual way to reference the stored value, in addition to referring to the variable
+            itself, depending on the context. This separation of name and content allows the name to be used independently
+            of the exact information it represents. The identifier in computer source code can be bound to a value during
+            run time, and the value of the variable may thus change during the course of program execution.
+        </p>
+        <p>
+            In computer programming, a variable or scalar is a storage location (identified by a memory address) paired with an associated
+            symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a
+            value. The variable name is the usual way to reference the stored value, in addition to referring to the variable
+            itself, depending on the context. This separation of name and content allows the name to be used independently
+            of the exact information it represents. The identifier in computer source code can be bound to a value during
+            run time, and the value of the variable may thus change during the course of program execution.
+        </p>
+        <p>
+            In computer programming, a variable or scalar is a storage location (identified by a memory address) paired with an associated
+            symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a
+            value. The variable name is the usual way to reference the stored value, in addition to referring to the variable
+            itself, depending on the context. This separation of name and content allows the name to be used independently
+            of the exact information it represents. The identifier in computer source code can be bound to a value during
+            run time, and the value of the variable may thus change during the course of program execution.
+        </p>
+        <p>
+            In computer programming, a variable or scalar is a storage location (identified by a memory address) paired with an associated
+            symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a
+            value. The variable name is the usual way to reference the stored value, in addition to referring to the variable
+            itself, depending on the context. This separation of name and content allows the name to be used independently
+            of the exact information it represents. The identifier in computer source code can be bound to a value during
+            run time, and the value of the variable may thus change during the course of program execution.
+        </p>
+    </div>
+</body>
+
+</html>
