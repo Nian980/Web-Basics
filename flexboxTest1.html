@@ -16,8 +16,12 @@
             flex-wrap: wrap, wrap-reverse, and nowrap
         */
 
+        /* center content horizontally - flex container property justify-content:center; */
+
         div {
-            /* This element is now a flex container, and will handle the layout of its children*/
+            /* This element is now a flex container, and will handle the layout of its children 
+            it's actually short for display: block flex. you can also do inline-flex. 
+            */
             display: flex;
             flex-flow: row wrap;
         }
@@ -33,6 +37,8 @@
             empty <div></div> construct as a placeholder for a CSS background image. 
         */
 
+        /* avoid margin: auto on flex items. it prevents align-self from working. */
+
         div p {
             /* Setting the flex-grow to 0 will prevent the flex item from growing. That will cause the item to lose its flexible sizing ability  */
             /* 
@@ -40,7 +46,13 @@
                 if the flex container needs to take away some space from the children, then those 
                 with the highest flex-shrink values contribute more of the needed space. 
             */
-            flex: 1 1;
+            /* 
+            The flex-basis can be used instead of the sizing properties on a flex item. 
+            If the flex-direction of the parent flex container is row or row-reverse, then the flex-basis will 
+            govern the width of the flex item. If the flex-direction is column or column-reverse, it governs the height.
+            The flex-basis provides the starting dimension (width or height) for the flex-item. It may be grown or shrunk from that. 
+            */
+            flex: 1 1 50px;
 
             /* Some other small changes to make it look neater */
             margin: 10px;
